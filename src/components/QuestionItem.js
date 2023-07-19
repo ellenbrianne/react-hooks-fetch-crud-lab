@@ -7,7 +7,8 @@ function QuestionItem({ question, handleDeleteQuestion, onAnswerChange }) {
     fetch(`http://localhost:4000/questions/${id}`, {
       method: "DELETE"
     })
-    handleDeleteQuestion(id)
+    .then(() => handleDeleteQuestion(id))
+    
   };
 
   function handleAnswerChange (event) {
